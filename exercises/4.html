@@ -6,9 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Screen Readers</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <style>
+      .warapper {
+        position: relative;
+      }
+      .skip-link {
+        color: blue;
+        background: white;
+        display: inline-block;
+        width: 150px;
+        font-size: 18px;
+        border: 2px solid red;
+        text-align: center;
+        vertical-align: center;
+        text-decoration: none;
+        letter-spacing: 2px;
+        font-weight: 700;
+        position: absolute;
+        top: -100px;
+      }
+      .skip-link:focus {
+        top: 0;
+        transform: top 2s ease-in;
+      }
+    </style>
   </head>
-  <body>
+  <body class="wrapper">
     <header>
+      <a href="#main" class="skip-link">Skip Link</a>
       <ul>
         <li><a href="../index.html">Home</a></li>
         <li>
@@ -42,7 +67,7 @@
         Let's make a skip link so that user's tabbing through can skip right
         over the navigation and get to this main content!
       </p>
-      <button>Skip to here!</button>
+      <button id="main">Skip to here!</button>
     </div>
   </body>
 </html>
